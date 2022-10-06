@@ -12,8 +12,18 @@ span {
   margin-left: 20px;
 }
 .city {
+  font-size: small;
+  margin-left: 50px;
+}
+
+.time {
   margin-left: auto;
   margin-right: 20px;
+  height: 70px;
+  width: 200px;
+  background-color: rgb(95, 91, 220);
+  border-radius: 10px;
+
 }
 
 .cityName {
@@ -49,6 +59,10 @@ margin-left: 10px;
   border-radius: 5%;
   flex-basis: 19%;
   height: 255px;
+}
+
+#data {
+  margin-top: 0%;
 }
 
 /* @keyframes App-logo-spin {
