@@ -1,10 +1,10 @@
 
-export function fetchData(url, setFiveDays) {
+export function fetchData(url, setFiveDaysWeather, time) {
     try {
   fetch(url)
   .then(res => res.json())
   .then (json => {
-    setFiveDays(json.list.filter(day => day.dt_txt.includes('00:00:00')))
+    setFiveDaysWeather(json.list.filter(day => day.dt_txt.includes(time)))
    })
   } catch (err) {
     console.warn(err);

@@ -1,6 +1,7 @@
 
-export function timeSearch (t) {
-    let now = new Date();
+export function timeSearch () {
+  let t;  
+  let now = new Date();
     let h = Math.round((now.getTime() - now.setHours(0, 0, 0, 0))/(1000*60*60));
     if (h === 23 || h === 24 || h === 1) t = '00:00:00';
     if (h === 2 || h === 3 || h === 4 ) t = '03:00';
