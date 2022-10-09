@@ -18,7 +18,6 @@ function App() {
     getPosition(setUrl, setCurrentPosition);
   }, [])    
   
-      
       useEffect(() => {
     if (currentPosition) {
       fetch(url)

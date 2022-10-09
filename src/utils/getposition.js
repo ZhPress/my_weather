@@ -1,6 +1,6 @@
 export async function getPosition (setUrl, setCurrentPosition) {
     const options = {
-        timeout: 5000,
+        timeout: 5000
       };
       
       function success(pos) {
