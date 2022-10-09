@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export function Day ({dt, dt_txt, main, weather}) {
+export function Day ({dt, dt_txt, main, weather, isLoad}) {
     //const date = new Date(dt*1000);
     const t = Math.round(main.temp);
     const t_feels = Math.round(main.feels_like);
@@ -12,14 +12,15 @@ export function Day ({dt, dt_txt, main, weather}) {
     arr = str.split('-').reverse()
 
     return (
-        <div className="day">
+       
+            <div className="day">
             <p>{arr[0]}.{arr[1]}.{arr[2]}</p>
             <p>Temherature {t} 'C</p>
             <p>Feels like {t_feels} 'C</p>
             <p>{weather[0].description}</p>
             <i className={imgURL}></i>
-
         </div>
        
-    )
+            
+        )
 }

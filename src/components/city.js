@@ -5,7 +5,7 @@ import { timeSearch } from "../utils/timeSearch";
 
 export const City = ({setFiveDaysWeather}) => {
     const [town, setTown] = useState();
-    const cities = ['', 'Kiev', 'Zaporizhzhia', 'Lviv'];
+    const cities = ['Ukraine', 'Kiev', 'Zaporizhzhia', 'Lviv'];
     const time = timeSearch();
     const chooseCity = cities.map(item => {
         return (<option key={item}>{item}</option>)
