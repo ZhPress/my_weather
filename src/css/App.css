@@ -3,11 +3,12 @@
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
+
 span {
   margin-left: 20px;
 }
@@ -16,14 +17,26 @@ span {
   margin-left: 70px;
 }
 
-.time {
+.position {
+  width: 250px;
+  height: 80px;
   margin-left: auto;
   margin-right: 20px;
-  height: 70px;
-  width: 200px;
-  background-color: rgb(95, 91, 220);
+  background-color: chartreuse;
   border-radius: 10px;
+  font-size: 12.5px;
+  color: black;
+}
 
+.position_p {
+margin-top: 5px;
+font-weight: bold;
+}
+
+.position_button {
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .cityName {
@@ -44,7 +57,6 @@ margin-left: 10px;
 }
 
 .App-days {
-  
   display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
