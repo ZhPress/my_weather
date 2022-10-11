@@ -12,15 +12,15 @@ function App() {
   const [fiveDaysWeather, setFiveDaysWeather] = useState([]);
   const [isLoad, setIsLoad] = useState(false);
   const [currentPosition, setCurrentPosition] = useState(true);
-  const [url, setUrl] = useState('https://api.openweathermap.org/data/2.5/forecast?q=ukraine&lang=en&units=metric&APPID=9e7ab1dd4f79b74a54dc4234759ad8b1');
+  const [place, setPlace] = useState();
   const time = timeSearch();
-  
+  //console.log(place);
   // useEffect(() =>{
   //   getPosition(setUrl, setCurrentPosition);
   // }, [])    
-  
+  console.log(place);
       useEffect(() => {
-      fetch(url)
+      fetch('https://api.openweathermap.org/data/2.5/forecast?q=ukraine&lang=en&units=metric&APPID=9e7ab1dd4f79b74a54dc4234759ad8b1')
      .then(res => res.json())
      .then (json => {
       setFiveDaysWeather(json.list.filter(day => day.dt_txt.includes(time)))
@@ -34,9 +34,10 @@ function App() {
     <div className="App">
       <header className="App-header">
           <span className='pr'>Прогноз погоди на п'ять діб </span>
-          <City setFiveDaysWeather={setFiveDaysWeather}  />
+          <City setFiveDaysWeather={setFiveDaysWeather} currentPosition={currentPosition} 
+          place={place} setPlace={setPlace} />
           {currentPosition && 
-          <Position setCurrentPosition={setCurrentPosition}
+          <Position setCurrentPosition={setCurrentPosition} setPlace={setPlace} place={place}
           setFiveDaysWeather={setFiveDaysWeather} time={time}  />}
       </header>
       <div className="Separate">

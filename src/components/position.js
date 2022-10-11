@@ -1,9 +1,10 @@
+import React from "react";
 import { getPosition } from "../utils/getposition";
 
-export const Position = ({setCurrentPosition, setFiveDaysWeather, time}) => {
+export const Position = ({setCurrentPosition, setPlace, setFiveDaysWeather, time }) => {
 
-    function getPositionWeather (setFiveDaysWeather, time) {
-        getPosition(setFiveDaysWeather, time);
+    function getPositionWeather (setFiveDaysWeather, time, setPlace) {
+        getPosition(setFiveDaysWeather, time, setPlace);
         setCurrentPosition(false);
     }
 
@@ -11,7 +12,7 @@ export const Position = ({setCurrentPosition, setFiveDaysWeather, time}) => {
         <div className="position">
         <p className="position_p">Визначити Ваше геоположення, для надання більш точної інформації? </p>
             <button className="position_button" 
-            onClick={(() => getPositionWeather(setFiveDaysWeather, time))}>Так</button>
+            onClick={(() => getPositionWeather(setFiveDaysWeather, time, setPlace))}>Так</button>
             <span>   </span>
             <button className="position_button"
             onClick={(() => setCurrentPosition(false))}>Ні</button>
