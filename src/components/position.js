@@ -13,7 +13,7 @@ export const Position = ({setCurrentPosition, setPlace, setFiveDaysWeather, time
         <p className="position_p">Визначити Ваше геоположення, для надання більш точної інформації? </p>
             <button className="position_button" 
             onClick={(() => getPositionWeather(setFiveDaysWeather, time, setPlace))}>Так</button>
-            <span>   </span>
+            <span id="span_position">   </span>
             <button className="position_button"
             onClick={(() => setCurrentPosition(false))}>Ні</button>
         </div>
