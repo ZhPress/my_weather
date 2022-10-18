@@ -1,18 +1,17 @@
 import React from "react"
-import logo from './img/favicon.ico'
+import logo from 'D:/my-app/my_weather/src/img/favicon.ico'
 
-export function Footer () {
+export function Footer ({isDay}) {
     return (
-<footer>
+<footer style={{bottom: isDay? '0': ''}}>
         <nav>
-          <a>Home</a>
-          <a>Contacts</a>
-          <a>Resurses</a>
-          <a>About</a>
-          <a>Location</a>
+          <a href="#">Home</a>
+          <a href="#">Contacts</a>
+          <a href="#">Resurses</a>
+          <a href="#">About</a>
+          <a href="#">Location</a>
         </nav>
         <div className="footer_logo"> 
-        <img src={logo} alt=""/>
         </div>
       </footer>
       
