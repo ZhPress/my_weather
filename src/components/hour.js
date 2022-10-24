@@ -16,9 +16,9 @@ export function Hour ({dt, dt_txt, main, weather}) {
     return (
             <div className="hour">
             <p>
-            <b> {arr[0]}, {weekDay}, {arr[1]}</b> 
-            <span> Температура повітря {t} 'C </span>
-            <span>Відчуваеться {t_feels} 'C </span>
+            <b id="hour_p_b1"> {arr[0]},</b> <b id="hour_p_b2">{weekDay}, {arr[1]}</b> 
+            <span id="hour_p_span1"> Температура повітря {t} 'C </span>
+            <span id="hour_p_span2"> Відчуваеться {t_feels} 'C </span>
             <div className="full_hour">
             <span className="span_full_hour">Тиск {main.grnd_level * 0.75} мм рт. ст.
             <span> Вологість {main.humidity}%

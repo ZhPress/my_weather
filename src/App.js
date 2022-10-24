@@ -7,9 +7,7 @@ import { Today } from './components/today';
 import { Footer } from './components/footer';
 import { Position } from './components/position';
 import ua from './ua.json';
-import meteo from './img/meteo.png'
 import { Hour } from './components/hour';
-
 
 function App() {
   const [fiveDaysWeather, setFiveDaysWeather] = useState([]);
@@ -35,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div className='logo_box'><img src={meteo} alt=""/></div>
+      <div className='logo_box'></div>
           <City setFiveDaysWeather={setFiveDaysWeather} towns={towns}
           place={place} setPlace={setPlace} setOneDayWeather={setOneDayWeather} />
           {currentPosition && 
@@ -60,14 +58,11 @@ function App() {
         )))
         }
         </div>
-      <div className='div_center'><a><img src="./logo192.png" alt=""/></a></div>
-      <Footer isDay={isDay} />
+      <div className='div_center'></div>
+      <Footer />
       </body>
     </div>
   );
 }
 
 export default App;
-
-
-//https://api.openweathermap.org/data/2.5/forecast?q=ukraine&lang=uk&units=metric&cnt=8&APPID=9e7ab1dd4f79b74a54dc4234759ad8b1

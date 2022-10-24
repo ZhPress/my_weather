@@ -1,9 +1,8 @@
 import React from "react"
-import logo from 'D:/my-app/my_weather/src/img/favicon.ico'
 
-export function Footer ({isDay}) {
+export function Footer () {
     return (
-<footer style={{bottom: isDay? '0': ''}}>
+<footer>
         <nav>
           <a href="#">Home</a>
           <a href="#">Contacts</a>

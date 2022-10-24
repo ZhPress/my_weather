@@ -52,7 +52,7 @@ function handClick () {
     <div className="city"> <span id="span_city"> Ваше місто:</span>
     {
       !isSearch && <p className="p_search_massage"> {massage} </p> }
-    <p className="p_search"> <input className="inp_search" value={place} 
+    <input className="inp_search" value={place} 
     onChange={handChange} placeholder='Назва міста' title={isSearch? '': 'Некоректна назва'}
     onFocus={() => setPlace('')}
     />
@@ -68,7 +68,7 @@ function handClick () {
         ) : (
           null
         )}
-        </ul></p>
+        </ul>
         <button className="b_search" disabled={!isSearch} onClick={handClick}>Пошук</button>
         </div>
   )
