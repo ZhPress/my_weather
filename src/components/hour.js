@@ -9,9 +9,6 @@ export function Hour ({dt, dt_txt, main, weather}) {
     const imgURL = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
     console.log(imgURL);
     let arr = dt_txt.split(' ');
-    // arr.pop();
-    // const str = arr.join();
-    // arr = str.split('-').reverse()
 
     return (
             <div className="hour">

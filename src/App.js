@@ -1,9 +1,15 @@
-import { useEffect, useState } from 'react';
+import React from "react";
+import {useEffect, useState } from 'react';
+//import WOW from 'wowjs';
+// import { Route, Routes, Link } from "react-router-dom";
+// import {About} from './components/about';
+// import {Contacts} from './components/contacts';
+// import { Location } from './components/location';
+// import {Resurses} from './components/resurses'
 import './css/App.css';
 import {City} from './components/city'
 import { Day } from './components/day';
 import { timeSearch } from './utils/timeSearch';
-import { Today } from './components/today';
 import { Footer } from './components/footer';
 import { Position } from './components/position';
 import ua from './ua.json';
@@ -30,6 +36,7 @@ function App() {
       alert('Помилка отримання даних')
     })//.finally(setIsLoad(true))
    }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -40,7 +47,7 @@ function App() {
           <Position setCurrentPosition={setCurrentPosition} setPlace={setPlace} place={place}
           setFiveDaysWeather={setFiveDaysWeather} time={time}  />}
       </header>
-      <div className="separate">
+      <div className="separate animate__animated animate__slideInLeft">
       <button onClick={() => setIsDay(true)}>Прогноз погоди на п'ять діб</button>
       <button onClick={() => setIsDay(false)}>Погодинний прогноз</button>
       </div>
@@ -58,7 +65,7 @@ function App() {
         )))
         }
         </div>
-      <div className='div_center'></div>
+      <div className='div_center'> </div>
       <Footer />
       </body>
     </div>

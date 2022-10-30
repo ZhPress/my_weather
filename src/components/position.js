@@ -1,4 +1,5 @@
 import React from "react";
+import WOW from 'wowjs';
 import { getPosition } from "../utils/getposition";
 
 export const Position = ({setCurrentPosition, setPlace, setFiveDaysWeather, time }) => {
@@ -9,7 +10,7 @@ export const Position = ({setCurrentPosition, setPlace, setFiveDaysWeather, time
     }
 
     return (
-        <div className="position">
+        <div className="position animate__animated animate__slideInDown">
         <p className="position_p">Визначити Ваше геоположення, для надання більш точної інформації? </p>
             <button className="position_button" 
             onClick={(() => getPositionWeather(setFiveDaysWeather, time, setPlace))}>Так</button>

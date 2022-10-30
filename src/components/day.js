@@ -2,7 +2,6 @@ import React from "react";
 
 
 export function Day ({dt, dt_txt, main, weather}) {
-    const [full, setFull] = React.useState(false);
     const date = new Date(dt*1000);
     const d = date.getDay();
     const week = ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четверг', "П'ятниця", 'Субота' ]
@@ -14,7 +13,6 @@ export function Day ({dt, dt_txt, main, weather}) {
     arr.pop();
     const str = arr.join();
     arr = str.split('-').reverse()
-    console.log(full);
 
     return (
             <div className="day">
